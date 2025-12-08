@@ -112,7 +112,7 @@ global.chatDefaults = {
   antiBot: false,
   antiBot2: false,
   modoadmin: false,
-  antiLink: true,
+  antiLink: false,
   antiImg: false,
   reaction: false,
   nsfw: false,
