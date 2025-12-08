@@ -42,7 +42,6 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
   'TOOLS': ['tools', 'advanced'],
   'BÚSQUEDA': ['search', 'buscador'],
   'PREM': ['fun', 'premium', 'social', 'custom'],
-  'SUB-BOT': ['serbot'],
   'OWNER': ['owner', 'creador'],
 }
 
