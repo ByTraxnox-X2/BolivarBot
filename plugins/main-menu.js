@@ -17,22 +17,22 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     let neww = performance.now()
     let speed = (neww - old).toFixed(4)
 
-    let menuText = `> 👋🏻 .ৎ˚₊‧  *Hola*, +${m.sender.split('@')[0]} *Pasa Feliz Navidad ❄️*.
+    let menuText = `*Hola👋🏻*, +${m.sender.split('@')[0]}.
 
- ִ \`I N F O - B O T\` ! ୧ ֹ 
+ INFORMACION DEL BOT 
    
-> ੭੭﹙❐﹚ \`bot :\` *ItsukiV3*
-> ੭੭﹙❐﹚ \`Ping :\` *${speed} ms*
-> ੭੭﹙❐﹚ \`Uptime :\` *${await getUptime()}*
-> ੭੭﹙❐﹚ \`RAM :\` *${(process.memoryUsage().rss / 1024 / 1024).toFixed(2)}* MB
-> ੭੭﹙❐﹚ \`Plugins :\` *${help.length}*
-> ੭੭﹙❐﹚ \`Owner :\` *@leoDev*
-> ੭੭﹙❐﹚ \`Mode :\` *${global.opts['self'] ? 'Private' : 'Public'}*
+「⚔」𖡺 bot : *ItsukiV3*
+「⚔」𖡺 Ping : *${speed} ms*
+「⚔」𖡺 Uptime : *${await getUptime()}*
+「⚔」𖡺 RAM : *${(process.memoryUsage().rss / 1024 / 1024).toFixed(2)}* MB
+「⚔」𖡺 Plugins : *${help.length}*
+「⚔」𖡺 Owner : *@leoDev*
+「⚔」𖡺 Mode : *${global.opts['self'] ? 'Private' : 'Public'}*
 
 `
 
     const categories = {
-  'NAKANO-INFO': ['main', 'info'],
+  'INFO': ['main', 'info'],
   'INTELIGENCIA': ['bots', 'ia'],
   'JUEGOS': ['game', 'gacha'],
   'ECONOMÍA': ['economy', 'rpgnk'],
@@ -41,9 +41,9 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
   'MULTIMEDIA': ['sticker', 'audio', 'anime'],
   'TOOLS': ['tools', 'advanced'],
   'BÚSQUEDA': ['search', 'buscador'],
-  'NK-PREM': ['fun', 'premium', 'social', 'custom'],
+  'PREM': ['fun', 'premium', 'social', 'custom'],
   'SUB-BOT': ['serbot'],
-  'NK-OWNER': ['owner', 'creador'],
+  'OWNER': ['owner', 'creador'],
 }
 
     for (let catName in categories) {
@@ -51,18 +51,18 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       let comandos = help.filter(menu => menu.tags.some(tag => catTags.includes(tag)))
 
       if (comandos.length) {
-        menuText += `> ꒰⌢ ʚ˚₊‧ » \`${catName}\` «\n`
+        menuText += `「⚔」𖡺 \`${catName}\` «\n`
         let uniqueCommands = [...new Set(comandos.flatMap(menu => menu.help))]
         for (let cmd of uniqueCommands) {
-          menuText += `> ੭੭﹙⤷﹚ ❄︎ \`\`\`${_p}${cmd}\`\`\`\n`
+          menuText += `「⚔」𖡺 \`\`\`${_p}${cmd}\`\`\`\n`
         }
-        menuText += `> ︶꒦︶꒷︶︶꒷꒦︶︶︶꒷꒦‧ ₊˚・\n\n`
+        menuText += `「⚔」𖡺\n\n`
       }
     }
 
-    menuText += `> *‐ ダ mᥲძᥱ ᑲᥡ ʟᴇᴏ*`
+    menuText += `*Desarrollado por ByTraxnox*`
 
-    await conn.sendMessage(m.chat, { react: { text: '❄️', key: m.key } })
+    await conn.sendMessage(m.chat, { react: { text: '🚀', key: m.key } })
 
     const localImagePath = join(process.cwd(), 'src', 'menu.jpg')
 
@@ -70,15 +70,8 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       {
         name: 'cta_url',
         buttonParamsJson: JSON.stringify({ 
-          display_text: '☃️ ᴄᴀɴᴀʟ ᴏғɪᴄɪᴀʟ', 
-          url: 'https://whatsapp.com/channel/0029VbBvZH5LNSa4ovSSbQ2N' 
-        })
-      },
-      {
-        name: 'cta_url',
-        buttonParamsJson: JSON.stringify({ 
-          display_text: '💻 ʜᴏsᴛɪɴɢ-ᴏғɪᴄɪᴀʟ', 
-          url: 'https://dash.quintillisas.com' 
+          display_text: 'GitHub del Bot', 
+          url: 'https://github.com/ByTraxnox-X2/BolivarBot' 
         })
       }
     ]
@@ -114,7 +107,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
   } catch (e) {
     console.error('❌ Error en el menú:', e)
     await conn.sendMessage(m.chat, {
-      text: `🍙 *ITSUNI MENÚ BÁSICO*\n\n• ${_p}menu - Menú principal\n• ${_p}ping - Estado del bot\n• ${_p}prefijos - Ver prefijos\n\n⚠️ *Error:* ${e.message}`
+      text: `*MENÚ BÁSICO*\n\n• ${_p}menu - Menú principal\n• ${_p}ping - Estado del bot\n• ${_p}prefijos - Ver prefijos\n\n⚠️ *Error:* ${e.message}`
     }, { quoted: m })
   }
 }
@@ -126,7 +119,7 @@ async function makeFkontak() {
     const thumb2 = Buffer.from(await res.arrayBuffer())
     return {
       key: { participants: '0@s.whatsapp.net', remoteJid: 'status@broadcast', fromMe: false, id: 'Halo' },
-      message: { locationMessage: { name: '☃️ 𝗠𝗲𝗻𝘂 𝗔𝗰𝘁𝘂𝗮𝗹𝗶𝘇𝗮𝗱𝗼 🧋', jpegThumbnail: thumb2 } },
+      message: { locationMessage: { name: '𝘽𝙤𝙡𝙞𝙫𝙖𝙧𝘽𝙤𝙩 𝙀𝙡 𝙈𝙖𝙨 𝙍𝙖𝙥𝙞𝙙𝙤🚀', jpegThumbnail: thumb2 } },
       participant: '0@s.whatsapp.net'
     }
   } catch {
