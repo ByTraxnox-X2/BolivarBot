@@ -44,8 +44,7 @@ let handler = async (m, { conn, text, usedPrefix }) => {
       `> \`💡 Ejemplo:\`\n` +
       `> \`• ${usedPrefix}play2 spy x family opening\`\n\n` +
       `> \`🎯 Formato:\`\n` +
-      `> \`🎥 Video MP4 de alta calidad\`\n\n` +
-      `> \`📚 "¡Disfruta tus videos con Itsuki Nakano!"\` ✨`,
+      `> \`🎥 Video MP4 de alta calidad\`\n\n`,
       m, ctxWarn
     )    
   }    
@@ -63,7 +62,7 @@ let handler = async (m, { conn, text, usedPrefix }) => {
     const { url, title, fuente } = await ytdl(video.url)    
 
     const caption = 
-      `> \`🌸✨ VIDEO ENCONTRADO\` 🍙\n\n` +
+      `> \`VIDEO ENCONTRADO\` 🍙\n\n` +
       `> \`💖 Título:\` ${title}\n` +
       `> \`🕑 Duración:\` ${video.timestamp}\n` +
       `> \`👤 Autor:\` ${video.author.name}\n` +
