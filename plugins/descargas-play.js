@@ -9,8 +9,8 @@ let handler = async (m, { conn, text, usedPrefix }) => {
 > ❌ Debes proporcionar el nombre de la canción
 
 > 📝 Ejemplos:
-> • ${usedPrefix}play nombre de la canción
-> • ${usedPrefix}play artista canción`, m)
+> • ${usedPrefix}musica nombre de la canción
+> • ${usedPrefix}musica artista canción`, m)
   }
 
   try {
@@ -91,9 +91,9 @@ let handler = async (m, { conn, text, usedPrefix }) => {
   }
 }
 
-handler.help = ['play']
+handler.help = ['musica']
 handler.tags = ['downloader']
-handler.command = ['play']
+handler.command = ['musica']
 handler.group = true
 
 export default handler
