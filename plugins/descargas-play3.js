@@ -103,7 +103,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
   }
 }
 
-handler.command = handler.help = ['play3', 'play4']
+handler.command = handler.help = ['musica2']
 handler.tags = ['downloader']
 handler.group = true
 
