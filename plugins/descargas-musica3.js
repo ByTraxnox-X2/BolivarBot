@@ -108,8 +108,8 @@ const handler = async (m, { conn, text, command, usedPrefix }) => {
   }
 };
 
-handler.command = ['play5', 'play6'];
+handler.command = ['musica3'];
 handler.tags = ['downloader'];
-handler.help = ['play5', 'play6'];
+handler.help = ['musica3'];
 
 export default handler;
