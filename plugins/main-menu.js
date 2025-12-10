@@ -64,18 +64,11 @@ INFORMACION DEL BOT
 
     menuText += `> *‐ ダ mᥲძᥱ ᑲᥡ ʟᴇᴏ*`
 
-    await conn.sendMessage(m.chat, { react: { text: '❄️', key: m.key } })
+    await conn.sendMessage(m.chat, { react: { text: '🚀', key: m.key } })
 
     const localImagePath = join(process.cwd(), 'src', 'menu.jpg')
 
     const nativeButtons = [
-      {
-        name: 'cta_url',
-        buttonParamsJson: JSON.stringify({ 
-          display_text: '☃️ ᴄᴀɴᴀʟ ᴏғɪᴄɪᴀʟ', 
-          url: 'https://whatsapp.com/channel/0029VbBvZH5LNSa4ovSSbQ2N' 
-        })
-      },
       {
         name: 'cta_url',
         buttonParamsJson: JSON.stringify({ 
@@ -116,7 +109,7 @@ INFORMACION DEL BOT
   } catch (e) {
     console.error('❌ Error en el menú:', e)
     await conn.sendMessage(m.chat, {
-      text: `🍙 *ITSUNI MENÚ BÁSICO*\n\n• ${_p}menu - Menú principal\n• ${_p}ping - Estado del bot\n• ${_p}prefijos - Ver prefijos\n\n⚠️ *Error:* ${e.message}`
+      text: `*MENÚ BÁSICO*\n\n• ${_p}menu - Menú principal\n• ${_p}ping - Estado del bot\n• ${_p}prefijos - Ver prefijos\n\n⚠️ *Error:* ${e.message}`
     }, { quoted: m })
   }
 }
@@ -124,11 +117,11 @@ INFORMACION DEL BOT
 // Quoted especial con mini-thumbnail
 async function makeFkontak() {
   try {
-    const res = await fetch('https://cdn.russellxz.click/64bba973.jpg')
+    const res = await fetch('https://iili.io/fut8rnR.jpg')
     const thumb2 = Buffer.from(await res.arrayBuffer())
     return {
       key: { participants: '0@s.whatsapp.net', remoteJid: 'status@broadcast', fromMe: false, id: 'Halo' },
-      message: { locationMessage: { name: '☃️ 𝗠𝗲𝗻𝘂 𝗔𝗰𝘁𝘂𝗮𝗹𝗶𝘇𝗮𝗱𝗼 🧋', jpegThumbnail: thumb2 } },
+      message: { locationMessage: { name: '𝘽𝙤𝙡𝙞𝙫𝙖𝙧𝘽𝙤𝙩 𝙀𝙡 𝙈𝙚𝙟𝙤𝙧🚀', jpegThumbnail: thumb2 } },
       participant: '0@s.whatsapp.net'
     }
   } catch {
