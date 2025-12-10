@@ -103,8 +103,8 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
   }
 }
 
-handler.help = ['musica5']
+handler.help = ['musica4']
 handler.tags = ['downloader']
-handler.command = ['musica5']
+handler.command = ['musica4']
 
 export default handler
