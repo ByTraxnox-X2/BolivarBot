@@ -21,9 +21,9 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
 
 PARA PODER UTILIZAR EL BOT DEBES PONER UN PREFIJO ( . ) O ( # ) Y SEGUIDO DEL COMANDO A UTILIZAR
 
- ִ \`I N F O - B O T\` ! ୧ ֹ 
+INFORMACION DEL BOT
    
-> \`bot :\` *ItsukiV3*
+> \`bot :\` *BolivarBot*
 > \`Ping :\` *${speed} ms*
 > \`Uptime :\` *${await getUptime()}*
 > \`RAM :\` *${(process.memoryUsage().rss / 1024 / 1024).toFixed(2)}* MB
