@@ -21,13 +21,13 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
 
  ִ \`Información del Bot` 
    
-> 「⚔」𖡺 \`bot :\` *BolivarBot*
-> 「⚔」𖡺 \`Ping :\` *${speed} ms*
-> 「⚔」𖡺 \`Uptime :\` *${await getUptime()}*
-> 「⚔」𖡺 \`RAM :\` *${(process.memoryUsage().rss / 1024 / 1024).toFixed(2)}* MB
-> 「⚔」𖡺 \`Plugins :\` *${help.length}*
-> 「⚔」𖡺 \`Owner :\` *@leoDev*
-> 「⚔」𖡺 \`Mode :\` *${global.opts['self'] ? 'Private' : 'Public'}*
+\`bot :\` *BolivarBot*
+\`Ping :\` *${speed} ms*
+\`Uptime :\` *${await getUptime()}*
+\`RAM :\` *${(process.memoryUsage().rss / 1024 / 1024).toFixed(2)}* MB
+\`Plugins :\` *${help.length}*
+\`Owner :\` *@leoDev*
+\`Mode :\` *${global.opts['self'] ? 'Private' : 'Public'}*
 
 `
 
@@ -50,16 +50,16 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       let comandos = help.filter(menu => menu.tags.some(tag => catTags.includes(tag)))
 
       if (comandos.length) {
-        menuText += `> \`${catName}\` «\n`
+        menuText += ` \`${catName}\` «\n`
         let uniqueCommands = [...new Set(comandos.flatMap(menu => menu.help))]
         for (let cmd of uniqueCommands) {
-          menuText += `> `\`\`${_p}${cmd}\`\`\`\n`
+          menuText += ` `\`\`${_p}${cmd}\`\`\`\n`
         }
-        menuText += `> \n\n`
+        menuText += ` \n\n`
       }
     }
 
-    menuText += `> *BolivarBot*`
+    menuText += ` *BolivarBot*`
 
     await conn.sendMessage(m.chat, { react: { text: '🚀, key: m.key } })
 
