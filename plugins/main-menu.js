@@ -19,15 +19,18 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
 
     let menuText = `*Hola👋🏻*, +${m.sender.split('@')[0]}.
 
- INFORMACION DEL BOT 
+ PARA USAR EL BOT DEBES PONER EL PRIFIJO PUEDE SER EL ( . ) O TAMBIEN  ( # ) 
+ SEGUIDO DEL COMANDO QUE VAYAS A USAR
+ 
+ *INFORMACION DEL BOT*
    
-「⚔」𖡺 bot : *ItsukiV3*
-「⚔」𖡺 Ping : *${speed} ms*
-「⚔」𖡺 Uptime : *${await getUptime()}*
-「⚔」𖡺 RAM : *${(process.memoryUsage().rss / 1024 / 1024).toFixed(2)}* MB
-「⚔」𖡺 Plugins : *${help.length}*
-「⚔」𖡺 Owner : *@leoDev*
-「⚔」𖡺 Mode : *${global.opts['self'] ? 'Private' : 'Public'}*
+𖡺 bot : *BolivarBot*
+𖡺 Ping : *${speed} ms*
+𖡺 Uptime : *${await getUptime()}*
+𖡺 RAM : *${(process.memoryUsage().rss / 1024 / 1024).toFixed(2)}* MB
+𖡺 Plugins : *${help.length}*
+𖡺 Owner : *@leoDev*
+𖡺 Mode : *${global.opts['self'] ? 'Private' : 'Public'}*
 
 `
 
@@ -50,12 +53,12 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       let comandos = help.filter(menu => menu.tags.some(tag => catTags.includes(tag)))
 
       if (comandos.length) {
-        menuText += `「⚔」𖡺 \`${catName}\` «\n`
+        menuText += `𖡺 \`${catName}\` «\n`
         let uniqueCommands = [...new Set(comandos.flatMap(menu => menu.help))]
         for (let cmd of uniqueCommands) {
-          menuText += `「⚔」𖡺 \`\`\`${_p}${cmd}\`\`\`\n`
+          menuText += `𖡺 \`\`\`${_p}${cmd}\`\`\`\n`
         }
-        menuText += `「⚔」𖡺\n\n`
+        menuText += `𖡺\n\n`
       }
     }
 
@@ -114,7 +117,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
 // Quoted especial con mini-thumbnail
 async function makeFkontak() {
   try {
-    const res = await fetch('https://cdn.russellxz.click/64bba973.jpg')
+    const res = await fetch('https://iili.io/fut8rnR.png')
     const thumb2 = Buffer.from(await res.arrayBuffer())
     return {
       key: { participants: '0@s.whatsapp.net', remoteJid: 'status@broadcast', fromMe: false, id: 'Halo' },
@@ -137,6 +140,6 @@ async function getUptime() {
 
 handler.help = ['menu','help']
 handler.tags = ['main']
-handler.command = ['itsuki', 'menu', 'help']
+handler.command = ['menu', 'help']
 
 export default handler
