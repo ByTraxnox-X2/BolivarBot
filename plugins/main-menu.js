@@ -28,7 +28,7 @@ INFORMACION DEL BOT
 > \`Uptime :\` *${await getUptime()}*
 > \`RAM :\` *${(process.memoryUsage().rss / 1024 / 1024).toFixed(2)}* MB
 > \`Plugins :\` *${help.length}*
-> \`Owner :\` *@leoDev*
+> \`Owner :\` *By Traxnox*
 > \`Mode :\` *${global.opts['self'] ? 'Private' : 'Public'}*
 
 `
