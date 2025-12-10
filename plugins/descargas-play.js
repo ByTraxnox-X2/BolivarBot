@@ -125,8 +125,8 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     let quickButtons = []
     if (firstYoutube) {
       quickButtons = [
-        { name: 'quick_reply', buttonParamsJson: JSON.stringify({ display_text: '🎧  ꛁ𐑼 ʏᴏᴛᴜʙᴇ ᴘʟᴀʏ-ᴀᴜᴅɪᴏ', id: `${usedPrefix}ytmp3 ${firstYoutube.url}` }) },
-        { name: 'quick_reply', buttonParamsJson: JSON.stringify({ display_text: '🎬  ꛁ𐑼 ʏᴏᴜᴛᴜʙᴇ ᴘʟᴀʏ-ᴠɪᴅᴇᴏ', id: `${usedPrefix}ytmp4 ${firstYoutube.url}` }) },
+        { name: 'quick_reply', buttonParamsJson: JSON.stringify({ display_text: '🎧ʏᴏᴛᴜʙᴇ ᴘʟᴀʏ-ᴀᴜᴅɪᴏ', id: `${usedPrefix}ytmp3 ${firstYoutube.url}` }) },
+        { name: 'quick_reply', buttonParamsJson: JSON.stringify({ display_text: '🎬ʏᴏᴜᴛᴜʙᴇ ᴘʟᴀʏ-ᴠɪᴅᴇᴏ', id: `${usedPrefix}ytmp4 ${firstYoutube.url}` }) },
       ]
     }
 
@@ -136,17 +136,8 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
         ? [{
             name: 'single_select',
             buttonParamsJson: JSON.stringify({
-              title: 'ׁ  ׅ  ׁ  ׅ  🫧^ֹ᪲᪲  ׁ  ׅ ʏᴏᴜᴛᴜʙᴇ ʟɪsᴛ',
+              title: 'ׁʏᴏᴜᴛᴜʙᴇ ʟɪsᴛ',
               sections: youtubeSections
-            })
-          }]
-        : []),
-      ...(songSections.length
-        ? [{
-            name: 'single_select',
-            buttonParamsJson: JSON.stringify({
-              title: '  ׅ  ׁ  ׅ  🎧^ֹ᪲᪲  ׁ  ׅ sᴘᴏᴛɪғʏ ʟɪsᴛ',
-              sections: songSections
             })
           }]
         : []),
@@ -154,7 +145,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
         ? [{
             name: 'single_select',
             buttonParamsJson: JSON.stringify({
-              title: '  ׅ  ׁ  ׅ  🍎^ֹ᪲᪲  ׁ  ׅ ᴀᴘᴘʟᴇ ᴍᴜsɪᴄ ʟɪsᴛ',
+              title: 'ᴀᴘᴘʟᴇ ᴍᴜsɪᴄ ʟɪsᴛ',
               sections: appleSections
             })
           }]
@@ -191,8 +182,8 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
   }
 }
 
-handler.help = ['play8' , 'play9']
+handler.help = ['play (Descarga musica y video)']
 handler.tags = ['downloader']
-handler.command = ['play8', 'play9']
+handler.command = ['play']
 
 export default handler
