@@ -17,22 +17,22 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     let neww = performance.now()
     let speed = (neww - old).toFixed(4)
 
-    let menuText = `*Hola 👋*, +${m.sender.split('@')[0]}.
+    let menuText = `> 👋🏻 .ৎ˚₊‧  *Hola*, +${m.sender.split('@')[0]} *Pasa Feliz Navidad ❄️*.
 
- ִ \`Información del Bot` 
+ ִ \`I N F O - B O T\` ! ୧ ֹ 
    
-> 「⚔」𖡺 \`bot :\` *BolivarBot*
-> 「⚔」𖡺 \`Ping :\` *${speed} ms*
-> 「⚔」𖡺 \`Uptime :\` *${await getUptime()}*
-> 「⚔」𖡺 \`RAM :\` *${(process.memoryUsage().rss / 1024 / 1024).toFixed(2)}* MB
-> 「⚔」𖡺 \`Plugins :\` *${help.length}*
-> 「⚔」𖡺 \`Owner :\` *@leoDev*
-> 「⚔」𖡺 \`Mode :\` *${global.opts['self'] ? 'Private' : 'Public'}*
+> ੭੭﹙❐﹚ \`bot :\` *ItsukiV3*
+> ੭੭﹙❐﹚ \`Ping :\` *${speed} ms*
+> ੭੭﹙❐﹚ \`Uptime :\` *${await getUptime()}*
+> ੭੭﹙❐﹚ \`RAM :\` *${(process.memoryUsage().rss / 1024 / 1024).toFixed(2)}* MB
+> ੭੭﹙❐﹚ \`Plugins :\` *${help.length}*
+> ੭੭﹙❐﹚ \`Owner :\` *@leoDev*
+> ੭੭﹙❐﹚ \`Mode :\` *${global.opts['self'] ? 'Private' : 'Public'}*
 
 `
 
     const categories = {
-  'BOLIVAR-INFO': ['main', 'info'],
+  'NAKANO-INFO': ['main', 'info'],
   'INTELIGENCIA': ['bots', 'ia'],
   'JUEGOS': ['game', 'gacha'],
   'ECONOMÍA': ['economy', 'rpgnk'],
@@ -41,9 +41,9 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
   'MULTIMEDIA': ['sticker', 'audio', 'anime'],
   'TOOLS': ['tools', 'advanced'],
   'BÚSQUEDA': ['search', 'buscador'],
-  'PREM': ['fun', 'premium', 'social', 'custom'],
+  'NK-PREM': ['fun', 'premium', 'social', 'custom'],
   'SUB-BOT': ['serbot'],
-  'OWNER': ['owner', 'creador'],
+  'NK-OWNER': ['owner', 'creador'],
 }
 
     for (let catName in categories) {
@@ -54,15 +54,15 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
         menuText += `> ꒰⌢ ʚ˚₊‧ » \`${catName}\` «\n`
         let uniqueCommands = [...new Set(comandos.flatMap(menu => menu.help))]
         for (let cmd of uniqueCommands) {
-          menuText += `> ੭੭➡️ ⚡ \`\`\`${_p}${cmd}\`\`\`\n`
+          menuText += `> ੭੭﹙⤷﹚ ❄︎ \`\`\`${_p}${cmd}\`\`\`\n`
         }
         menuText += `> ︶꒦︶꒷︶︶꒷꒦︶︶︶꒷꒦‧ ₊˚・\n\n`
       }
     }
 
-    menuText += `> *BolivarBot*`
+    menuText += `> *‐ ダ mᥲძᥱ ᑲᥡ ʟᴇᴏ*`
 
-    await conn.sendMessage(m.chat, { react: { text: '⚡', key: m.key } })
+    await conn.sendMessage(m.chat, { react: { text: '❄️', key: m.key } })
 
     const localImagePath = join(process.cwd(), 'src', 'menu.jpg')
 
@@ -70,7 +70,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       {
         name: 'cta_url',
         buttonParamsJson: JSON.stringify({ 
-          display_text: '☃️ ᴄᴀɴᴀʟ', 
+          display_text: '☃️ ᴄᴀɴᴀʟ ᴏғɪᴄɪᴀʟ', 
           url: 'https://whatsapp.com/channel/0029VbBvZH5LNSa4ovSSbQ2N' 
         })
       },
@@ -114,7 +114,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
   } catch (e) {
     console.error('❌ Error en el menú:', e)
     await conn.sendMessage(m.chat, {
-      text: `⚡ *MENÚ BÁSICO*\n\n• ${_p}menu - Menú principal\n• ${_p}ping - Estado del bot\n• ${_p}prefijos - Ver prefijos\n\n⚠️ *Error:* ${e.message}`
+      text: `🍙 *ITSUNI MENÚ BÁSICO*\n\n• ${_p}menu - Menú principal\n• ${_p}ping - Estado del bot\n• ${_p}prefijos - Ver prefijos\n\n⚠️ *Error:* ${e.message}`
     }, { quoted: m })
   }
 }
@@ -126,7 +126,7 @@ async function makeFkontak() {
     const thumb2 = Buffer.from(await res.arrayBuffer())
     return {
       key: { participants: '0@s.whatsapp.net', remoteJid: 'status@broadcast', fromMe: false, id: 'Halo' },
-      message: { locationMessage: { name: 'Menu Actualizado', jpegThumbnail: thumb2 } },
+      message: { locationMessage: { name: '☃️ 𝗠𝗲𝗻𝘂 𝗔𝗰𝘁𝘂𝗮𝗹𝗶𝘇𝗮𝗱𝗼 🧋', jpegThumbnail: thumb2 } },
       participant: '0@s.whatsapp.net'
     }
   } catch {
