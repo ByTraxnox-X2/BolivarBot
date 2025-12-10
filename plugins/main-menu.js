@@ -19,9 +19,6 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
 
     let menuText = `*Hola👋🏻*, +${m.sender.split('@')[0]}.
 
- PARA USAR EL BOT DEBES PONER EL PRIFIJO PUEDE SER EL ( . ) O TAMBIEN  ( # ) 
- SEGUIDO DEL COMANDO QUE VAYAS A USAR
- 
  *INFORMACION DEL BOT*
    
 𖡺 bot : *BolivarBot*
