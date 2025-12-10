@@ -19,17 +19,17 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
 
     let menuText = `*Hola 👋*, +${m.sender.split('@')[0]}.
 
-PARA PODER UTILIZAR EL BOT DEBES PONER UN PREFIJO Y SEGUIDO DEL COMANDO A UTILIZAR
+PARA PODER UTILIZAR EL BOT DEBES PONER UN PREFIJO ( . ) O ( # ) Y SEGUIDO DEL COMANDO A UTILIZAR
 
  ִ \`I N F O - B O T\` ! ୧ ֹ 
    
-> ੭੭﹙❐﹚ \`bot :\` *ItsukiV3*
-> ੭੭﹙❐﹚ \`Ping :\` *${speed} ms*
-> ੭੭﹙❐﹚ \`Uptime :\` *${await getUptime()}*
-> ੭੭﹙❐﹚ \`RAM :\` *${(process.memoryUsage().rss / 1024 / 1024).toFixed(2)}* MB
-> ੭੭﹙❐﹚ \`Plugins :\` *${help.length}*
-> ੭੭﹙❐﹚ \`Owner :\` *@leoDev*
-> ੭੭﹙❐﹚ \`Mode :\` *${global.opts['self'] ? 'Private' : 'Public'}*
+> \`bot :\` *ItsukiV3*
+> \`Ping :\` *${speed} ms*
+> \`Uptime :\` *${await getUptime()}*
+> \`RAM :\` *${(process.memoryUsage().rss / 1024 / 1024).toFixed(2)}* MB
+> \`Plugins :\` *${help.length}*
+> \`Owner :\` *@leoDev*
+> \`Mode :\` *${global.opts['self'] ? 'Private' : 'Public'}*
 
 `
 
