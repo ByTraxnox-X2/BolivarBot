@@ -17,7 +17,9 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     let neww = performance.now()
     let speed = (neww - old).toFixed(4)
 
-    let menuText = `> 👋🏻 .ৎ˚₊‧  *Hola*, +${m.sender.split('@')[0]} *Pasa Feliz Navidad ❄️*.
+    let menuText = `*Hola 👋*, +${m.sender.split('@')[0]}.
+
+PARA PODER UTILIZAR EL BOT DEBES PONER UN PREFIJO Y SEGUIDO DEL COMANDO A UTILIZAR
 
  ִ \`I N F O - B O T\` ! ୧ ֹ 
    
