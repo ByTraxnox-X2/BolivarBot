@@ -72,7 +72,7 @@ INFORMACION DEL BOT
         name: 'cta_url',
         buttonParamsJson: JSON.stringify({ 
           display_text: 'GitHub Del Bot', 
-          url: 'https://github.com/ByTraxnox-X2/BolivarBo' 
+          url: 'https://github.com/ByTraxnox-X2/BolivarBot' 
         })
       }
     ]
