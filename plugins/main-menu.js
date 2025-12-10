@@ -117,7 +117,7 @@ INFORMACION DEL BOT
 // Quoted especial con mini-thumbnail
 async function makeFkontak() {
   try {
-    const res = await fetch('https://iili.io/fut8rnR.jpg')
+    const res = await fetch('https://cdn.russellxz.click/64bba973.jpg')
     const thumb2 = Buffer.from(await res.arrayBuffer())
     return {
       key: { participants: '0@s.whatsapp.net', remoteJid: 'status@broadcast', fromMe: false, id: 'Halo' },
