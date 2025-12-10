@@ -34,7 +34,7 @@ INFORMACION DEL BOT
 `
 
     const categories = {
-  'NAKANO-INFO': ['main', 'info'],
+  'INFO': ['main', 'info'],
   'INTELIGENCIA': ['bots', 'ia'],
   'JUEGOS': ['game', 'gacha'],
   'ECONOMÍA': ['economy', 'rpgnk'],
@@ -43,9 +43,8 @@ INFORMACION DEL BOT
   'MULTIMEDIA': ['sticker', 'audio', 'anime'],
   'TOOLS': ['tools', 'advanced'],
   'BÚSQUEDA': ['search', 'buscador'],
-  'NK-PREM': ['fun', 'premium', 'social', 'custom'],
-  'SUB-BOT': ['serbot'],
-  'NK-OWNER': ['owner', 'creador'],
+  'PREM': ['fun', 'premium', 'social', 'custom'],
+  'OWNER': ['owner', 'creador'],
 }
 
     for (let catName in categories) {
@@ -53,16 +52,16 @@ INFORMACION DEL BOT
       let comandos = help.filter(menu => menu.tags.some(tag => catTags.includes(tag)))
 
       if (comandos.length) {
-        menuText += `> ꒰⌢ ʚ˚₊‧ » \`${catName}\` «\n`
+        menuText += `>ᚔᚔᚔᚔᚔᚔᚔᚔᚔ \`${catName}\` «\n`
         let uniqueCommands = [...new Set(comandos.flatMap(menu => menu.help))]
         for (let cmd of uniqueCommands) {
-          menuText += `> ੭੭﹙⤷﹚ ❄︎ \`\`\`${_p}${cmd}\`\`\`\n`
+          menuText += `⊳ \`\`\`${_p}${cmd}\`\`\`\n`
         }
-        menuText += `> ︶꒦︶꒷︶︶꒷꒦︶︶︶꒷꒦‧ ₊˚・\n\n`
+        menuText += `>ᚔᚔᚔᚔᚔᚔᚔᚔᚔ\n\n`
       }
     }
 
-    menuText += `> *‐ ダ mᥲძᥱ ᑲᥡ ʟᴇᴏ*`
+    menuText += `>Creador By Traxnox*`
 
     await conn.sendMessage(m.chat, { react: { text: '🚀', key: m.key } })
 
@@ -72,8 +71,8 @@ INFORMACION DEL BOT
       {
         name: 'cta_url',
         buttonParamsJson: JSON.stringify({ 
-          display_text: '💻 ʜᴏsᴛɪɴɢ-ᴏғɪᴄɪᴀʟ', 
-          url: 'https://dash.quintillisas.com' 
+          display_text: 'GitHub Del Bot', 
+          url: 'https://github.com/ByTraxnox-X2/BolivarBo' 
         })
       }
     ]
