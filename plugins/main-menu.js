@@ -21,13 +21,13 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
 
  ִ \`Información del Bot` 
    
-\`bot :\` *BolivarBot*
-\`Ping :\` *${speed} ms*
-\`Uptime :\` *${await getUptime()}*
-\`RAM :\` *${(process.memoryUsage().rss / 1024 / 1024).toFixed(2)}* MB
-\`Plugins :\` *${help.length}*
-\`Owner :\` *@leoDev*
-\`Mode :\` *${global.opts['self'] ? 'Private' : 'Public'}*
+> 「⚔」𖡺 \`bot :\` *BolivarBot*
+> 「⚔」𖡺 \`Ping :\` *${speed} ms*
+> 「⚔」𖡺 \`Uptime :\` *${await getUptime()}*
+> 「⚔」𖡺 \`RAM :\` *${(process.memoryUsage().rss / 1024 / 1024).toFixed(2)}* MB
+> 「⚔」𖡺 \`Plugins :\` *${help.length}*
+> 「⚔」𖡺 \`Owner :\` *@leoDev*
+> 「⚔」𖡺 \`Mode :\` *${global.opts['self'] ? 'Private' : 'Public'}*
 
 `
 
@@ -42,6 +42,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
   'TOOLS': ['tools', 'advanced'],
   'BÚSQUEDA': ['search', 'buscador'],
   'PREM': ['fun', 'premium', 'social', 'custom'],
+  'SUB-BOT': ['serbot'],
   'OWNER': ['owner', 'creador'],
 }
 
@@ -50,18 +51,18 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       let comandos = help.filter(menu => menu.tags.some(tag => catTags.includes(tag)))
 
       if (comandos.length) {
-        menuText += ` \`${catName}\` «\n`
+        menuText += `> ꒰⌢ ʚ˚₊‧ » \`${catName}\` «\n`
         let uniqueCommands = [...new Set(comandos.flatMap(menu => menu.help))]
         for (let cmd of uniqueCommands) {
-          menuText += ` `\`\`${_p}${cmd}\`\`\`\n`
+          menuText += `> ੭੭➡️ ⚡ \`\`\`${_p}${cmd}\`\`\`\n`
         }
-        menuText += ` \n\n`
+        menuText += `> ︶꒦︶꒷︶︶꒷꒦︶︶︶꒷꒦‧ ₊˚・\n\n`
       }
     }
 
-    menuText += ` *BolivarBot*`
+    menuText += `> *BolivarBot*`
 
-    await conn.sendMessage(m.chat, { react: { text: '🚀, key: m.key } })
+    await conn.sendMessage(m.chat, { react: { text: '⚡', key: m.key } })
 
     const localImagePath = join(process.cwd(), 'src', 'menu.jpg')
 
@@ -76,8 +77,8 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       {
         name: 'cta_url',
         buttonParamsJson: JSON.stringify({ 
-          display_text: 'GitHub del Bot', 
-          url: 'https://github.com/ByTraxnox-X2/BolivarBot' 
+          display_text: '💻 ʜᴏsᴛɪɴɢ-ᴏғɪᴄɪᴀʟ', 
+          url: 'https://dash.quintillisas.com' 
         })
       }
     ]
